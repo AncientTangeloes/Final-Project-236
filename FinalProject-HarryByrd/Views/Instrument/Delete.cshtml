@@ -3,8 +3,8 @@
     ViewBag.Title = "Delete Instrument";
 }
 
-<h2 style="color: sandybrown">Confirm Deletion</h2>
-<h4 style="color: sandybrown">@Model.Name (@Model.Year)</h4>
+<h2 style="color: azure">Confirm Deletion</h2>
+<h4 style="color: azure">@Model.Name</h4>
 <br />
 <form asp-action="Delete" method="post">
     <input type="hidden" asp-for="InstrumentId" />
