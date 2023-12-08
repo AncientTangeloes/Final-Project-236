@@ -1,13 +1,13 @@
-﻿@model Game
+﻿@model Instrument
 @{
-    ViewBag.Title = "Delete Game";
+    ViewBag.Title = "Delete Instrument";
 }
 
 <h2 style="color: sandybrown">Confirm Deletion</h2>
 <h4 style="color: sandybrown">@Model.Name (@Model.Year)</h4>
 <br />
 <form asp-action="Delete" method="post">
-    <input type="hidden" asp-for="GameId" />
+    <input type="hidden" asp-for="InstrumentId" />
 
     <button type="submit" class="btn btn-danger">Delete</button>
     <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Cancel</a>

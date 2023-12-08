@@ -3,22 +3,23 @@ using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 using System.Linq;
 using FinalProject_HarryByrd.Models;
+using System.Diagnostics.Metrics;
 
-namespace GameList.Controllers
+namespace InstrumentList.Controllers
 {
     public class HomeController : Controller
     {
-        private GameContext context { get; set; }
+        private InstrumentContext context { get; set; }
 
-        public HomeController(GameContext ctx)
+        public HomeController(InstrumentContext ctx)
         {
             context = ctx;
         }
 
         public IActionResult Index()
         {
-            var games = context.Games.Include(m => m.Genre).OrderBy(m => m.Name).ToList();
-            return View(games);
+            var instruments = context.Instruments.Include(m => m.Category).OrderBy(m => m.Name).ToList();
+            return View(instruments);
         }
     }
 }

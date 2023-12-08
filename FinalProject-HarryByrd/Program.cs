@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<GameContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("GameContext")));
+builder.Services.AddDbContext<InstrumentContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("InstrumentContext")));
 
 var app = builder.Build();
 

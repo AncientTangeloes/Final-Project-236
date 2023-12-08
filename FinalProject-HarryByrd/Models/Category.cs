@@ -1,8 +1,8 @@
 ﻿namespace FinalProject_HarryByrd.Models
 {
-    public class Genre
+    public class Category
     {
-        public string? GenreId { get; set; }
+        public string? CategoryId { get; set; }
         public string? Name { get; set; }
     }
 }
